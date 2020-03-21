@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header .header__title {
+  font-size: 24px;
+  /* font weight를 쓰기위해선 해당 값이 import 된 상태로 써야한다 (구글 폰트 import 부분)*/
+  font-weight: 700;
+}
+
+.header .header__icon {
+  font-size: 20px;
+  margin-left: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header .header__header-column {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__back-btn {
+  font-size: 24px;
+  margin-right: 22px;
+}
