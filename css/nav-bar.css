@@ -1,0 +1,21 @@
+.nav {
+  background-color: #fcfcfc;
+  position: fixed;
+  /*
+    fixed를 쓸땐 항상 width를 반드시 지정해준다.
+  */
+  width: 100%;
+  padding: 15px;
+  left: 0px;
+  bottom: 0px;
+  border-top: 1px solid #f7f7f7;
+}
+
+.nav .nav__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav i {
+  font-size: 20px;
+}
