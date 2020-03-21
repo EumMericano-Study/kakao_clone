@@ -1,0 +1,19 @@
+.friend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend .friend__avartar {
+  width: 50px;
+  border-radius: 35%;
+}
+
+/* 
+    붙여서 쓰면 두개 다 적용하겠다는 의미 
+    띄어져있으면 내부에 있는 클래스를 의미
+*/
+
+.friend__avartar.g-avartar {
+  width: 70px;
+}
