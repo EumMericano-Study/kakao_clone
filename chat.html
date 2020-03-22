@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Chat | Kakao Clone</title>
   </head>
-  <body>
+  <body class="chats-body">
     <div class="status-bar">
       <div class="status-bar__column">
         <span class="status-bar__clock">13:54</span>
@@ -25,7 +25,7 @@
         <i class="fas fa-battery-full"></i>
       </div>
     </div>
-    <header class="header">
+    <header class="header chat">
       <div class="header__header-column">
         <a href="index.html" class="header__back-btn">
           <i class="fas fa-arrow-left"></i>
@@ -41,9 +41,9 @@
         </span>
       </div>
     </header>
-    <main class="chat">
+    <main class="chat-screen">
       <ul class="chat__messages">
-        <span class="chat_timestamp">Wendsday, January 11, 2023</span>
+        <span class="chat__timestamp">Wendsday, January 11, 2023</span>
         <li class="incoming-message message">
           <img src="images/avartar.png" class="g-avartar message__avartar" />
           <div class="message__content">
@@ -53,14 +53,12 @@
               I am really, really excited!
             </div>
           </div>
-          <span class="message__timestamp"></span>
         </li>
-        <li class="incoming-message message">
-          <span class="message__timestamp"></span>
+        <li class="sent-message message">
           <div class="message__content">
             <div class="message__bubble">
-              me too! And I hope the food is delicious. <br />
-              long do you think it will take?
+              me too! I hope so, the food is delicious. <br />
+              how long do you think it will take?
             </div>
           </div>
         </li>
@@ -69,14 +67,13 @@
           <div class="message__content">
             <span class="message__author">Seul gi</span>
             <div class="message__bubble">
-              i will be there soon! wait a minute🙋‍♀
+              it will be! lol <br/>i will be there soon! just a minute🙋‍♀
             </div>
           </div>
-          <span class="message__timestamp"></span>
         </li>
       </ul>
     </main>
-    <div class="chat_write">
+    <div class="chat__write">
       <div class="chat__write-column">
         <i class="far fa-plus-square"></i>
       </div>
