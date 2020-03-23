@@ -18,10 +18,9 @@
     margin-top: 67px;
 }
 
-.chat__write {
+.chat__write-container {
     position: fixed;
-    bottom: 50px;
-    width: 80%;
+    bottom:0;
     /*
         position이 fixed인 div의
         가운데 정렬법: 
@@ -37,17 +36,57 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fcfcfc;
-    padding: 0px 20px;
+    width: 100%;
+}
+
+.chat__write {
+    bottom: 0px;
+    width: 100%;
+    border-radius: 0px;
+    padding: 20px 60px;
+    border: none;
+    margin: 0 auto;
+    font-size: 15px;
+    transition: width .5s ease-in-out, radius .5s ease-in-out,
+     transform .5s ease-in-out;
+}
+
+.chat__write:focus {
+    outline: none;
+    width: 80%;
+    transform: translateY(-80px);
     border-radius: 40px;
     /*
         box-shadow: 수평 수직 blur color;
         2가지의 shadow를 넣으려면 마지막에 , 를 쓰고
         똑같이 작성하면 된다
         참고 : https://stripe.com/
-    */
+    */    
     box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 
     0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    
+}
+
+.chat__icon {
+    font-size: 18px;
+    transition: opacity 0.2s ease-in-out
+}
+
+/*sibling selector (~)를 사용하기 위해선 html상에서 input이 icon앞에 나와야 한다.*/
+.chat__write:focus ~ .chat__icon {
+    /* animation을 위해 display:none 이 아닌 opacity: 0 으로 선언*/
+    opacity: 0;
+}
+
+
+.chat__icon-left {
+    position: absolute;
+    left: 10px;
+}
+
+.chat__icon-right {
+    position: absolute;
+    right: 10px;
 }
 
 .chat__write i {
@@ -60,15 +99,6 @@
     width: 80%;
 }
 
-.chat__write-column input {
-    padding: 15px 10px;
-    border: none;
-    font-size: 15px;
-}
-
-.chat__write-column input:focus {
-    outline: none;
-}
 
 .chat-screen .chat__messages {
     padding-top: 30px;
